@@ -9,7 +9,7 @@ them into a form readable by MATLAB
 import glob
 import numpy as np
 
-def parse3DEC(path):
+def parse_info_volume(path):
 #path = 'C:/Users/Rebecca Napolitano/Google Drive/Documents/Research/itascatrainingetc/geomreadin/testfolder/' #make sure to change
 
     info_files = glob.glob(path+'*_info.dat')
