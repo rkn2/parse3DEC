@@ -15,7 +15,7 @@ def parse_disp(path):
         fid = open(filename+'_disp.dat', 'r+') #open disp file from 3dec
         txt = fid.read()
         fid.close()
-        txt = txt.replace('(','').replace(')','').replace(',',' ').replace('\n 0\n',' ') #remove extra characters, not sure how to do the last entry
+        txt = txt.replace('(','').replace(')','').replace(',',' ').replace('\n 0\n',' ') #remove extra characters
         dat = np.fromstring(txt,sep=' \n')[:-1] # ask numpy to convert string to array
         all_dat = np.reshape(dat[:],(-1,4)) # reshape array from 1D to 2D #-1 means "dont care how long it is, just make 4 columns"
         np.savetxt(filename+'_disp_py.dat', all_dat)
